@@ -36,7 +36,19 @@ const UserSchema = new mongoose.Schema({
   paymentScreenshot: {
     type: String, // Store image URL or base64 string
     required: true
-  }
+  },
+  frontCnic: {
+    type: String, // Store image URL or base64 string
+    required: true
+  },
+  backCnic: {
+    type: String, // Store image URL or base64 string
+    required: true
+  },
+  utilityBill: {
+    type: String, // Store image URL or base64 string
+    required: true
+  },
 });
 
 const User = mongoose.model('User', UserSchema);
