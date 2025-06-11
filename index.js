@@ -1,13 +1,13 @@
 const express = require('express');
 var cors = require('cors')
 
+const connectToMongoose = require('./db'); // if this connects to MongoDB
 connectToMongoose();
 const app = express();
 const port = 5000;
 
 
 app.use(cors())
-const connectToMongoose = require('./db'); // if this connects to MongoDB
 app.use(express.json())
 
 app.use("/api/user", require("./routes/user"))
